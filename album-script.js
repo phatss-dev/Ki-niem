@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function spawnHeartPhotosCentered() {
-    const totalPhotos = 35;
+    const totalPhotos = 39;
 
     for (let i = 0; i < totalPhotos; i++) {
       setTimeout(() => {
