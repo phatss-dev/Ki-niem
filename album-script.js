@@ -138,4 +138,20 @@ document.addEventListener('DOMContentLoaded', () => {
       }, i * 100);
     }
   }
+
+  // 👇 Thêm vào trước dấu đóng `});`
+  document.addEventListener('click', function (e) {
+    if (e.target.classList.contains('photo')) {
+      // Nếu đã được phóng to thì thu nhỏ lại
+      if (e.target.classList.contains('active-photo')) {
+        e.target.classList.remove('active-photo');
+      } else {
+        // Gỡ phóng to ảnh khác nếu có
+        document.querySelectorAll('.photo.active-photo').forEach(p => {
+          p.classList.remove('active-photo');
+        });
+        // Phóng to ảnh được click
+        e.target.classList.add('active-photo');
+      }
+    }
 });
